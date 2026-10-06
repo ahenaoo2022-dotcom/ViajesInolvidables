@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear cuenta — Viajes Inolvidables</title>
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Viajes Inolvidables">
+      <span>Viajes Inolvidables<span class="brand-mark">AGENCIA DE VIAJES · COL</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Inicio</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contactenos.html">Contáctenos</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="auth-section">
+  <div class="container auth-grid">
+
+    <div class="auth-side">
+      <p class="eyebrow">Únete gratis</p>
+      <h1>Crea tu cuenta en un minuto</h1>
+      <p>Guarda tus destinos favoritos, agiliza tus próximas reservas y recibe ofertas antes que nadie.</p>
+      <ul class="benefit-list">
+        <li><i class="fa-solid fa-check"></i> Historial de tus cotizaciones y reservas</li>
+        <li><i class="fa-solid fa-check"></i> Ofertas exclusivas para usuarios registrados</li>
+        <li><i class="fa-solid fa-check"></i> Check-in de datos más rápido en tu próxima compra</li>
+      </ul>
+    </div>
+
+    <div class="auth-card">
+      <h2>Crear cuenta</h2>
+
+      <form id="formRegister" action="php/register.php" method="POST" novalidate>
+        <div class="field">
+          <label for="rg-nombre">Nombre completo</label>
+          <input type="text" id="rg-nombre" name="nombre" required minlength="3" autocomplete="name">
+          <span class="error-msg">Escribe tu nombre completo.</span>
+        </div>
+        <div class="field">
+          <label for="rg-email">Correo electrónico</label>
+          <input type="email" id="rg-email" name="email" required autocomplete="email">
+          <span class="error-msg">Ingresa un correo válido.</span>
+        </div>
+        <div class="field">
+          <label for="rg-telefono">Teléfono</label>
+          <input type="tel" id="rg-telefono" name="telefono" required pattern="[0-9+ ]{7,15}" autocomplete="tel">
+          <span class="error-msg">Ingresa un teléfono válido.</span>
+        </div>
+        <div class="field">
+          <label for="rg-password">Contraseña</label>
+          <div class="password-wrap">
+            <input type="password" id="rg-password" name="password" required minlength="6" autocomplete="new-password">
+            <button type="button" class="pw-toggle" data-target="rg-password" aria-label="Mostrar contraseña"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <span class="error-msg">Mínimo 6 caracteres.</span>
+        </div>
+        <div class="field">
+          <label for="rg-password2">Confirmar contraseña</label>
+          <div class="password-wrap">
+            <input type="password" id="rg-password2" name="password2" required minlength="6" autocomplete="new-password">
+            <button type="button" class="pw-toggle" data-target="rg-password2" aria-label="Mostrar contraseña"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <span class="error-msg">Las contraseñas no coinciden.</span>
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox" id="rg-terminos" name="terminos" required>
+          <label for="rg-terminos">Acepto los términos y condiciones y el tratamiento de mis datos personales.</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Crear cuenta</button>
+        <p class="form-note" style="text-align:center;margin-top:16px;">¿Ya tienes cuenta? <a href="login.html">Ingresa aquí</a></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.12); padding-top:22px;">
+      <span>© <span id="year"></span> Viajes Inolvidables. Todos los derechos reservados.</span>
+      <span>RNT Colombia · Agencia registrada</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

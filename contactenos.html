@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contáctenos — Viajes Inolvidables</title>
+<meta name="description" content="Escríbenos para armar tu itinerario a medida. Formulario, teléfono, correo y ubicación de Viajes Inolvidables.">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Viajes Inolvidables">
+      <span>Viajes Inolvidables<span class="brand-mark">AGENCIA DE VIAJES · COL</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Inicio</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contactenos.html" aria-current="page">Contáctenos</a>
+      <div class="nav-auth" id="navAuth">
+        <a href="login.html" class="btn btn-outline" data-auth="guest">Ingresar</a>
+        <a href="register.html" class="btn btn-primary" data-auth="guest">Crear cuenta</a>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Hablemos</p>
+    <h1>Cuéntanos tu próximo viaje</h1>
+    <p>Escríbenos, llámanos o pasa por la oficina. Respondemos en menos de 24 horas hábiles.</p>
+  </div>
+</section>
+
+<section class="section contact-section">
+  <div class="container contact-grid">
+
+    <div class="contact-form-card">
+      <h2>Envíanos un mensaje</h2>
+      <p class="form-note" style="margin-bottom:20px;">Completa el formulario y un asesor se pondrá en contacto contigo lo más pronto posible.</p>
+
+      <form id="formContacto" action="php/contacto.php" method="POST" novalidate>
+        <div class="field">
+          <label for="c-nombre">Nombre completo</label>
+          <input type="text" id="c-nombre" name="nombre" required minlength="3">
+          <span class="error-msg">Escribe tu nombre completo (mínimo 3 caracteres).</span>
+        </div>
+        <div class="field">
+          <label for="c-email">Correo electrónico</label>
+          <input type="email" id="c-email" name="email" required>
+          <span class="error-msg">Ingresa un correo electrónico válido.</span>
+        </div>
+        <div class="field">
+          <label for="c-telefono">Teléfono (opcional)</label>
+          <input type="tel" id="c-telefono" name="telefono" pattern="[0-9+ ]{7,15}">
+          <span class="error-msg">Ingresa solo números, espacios o "+".</span>
+        </div>
+        <div class="field">
+          <label for="c-asunto">Asunto</label>
+          <select id="c-asunto" name="asunto" required>
+            <option value="">Selecciona un motivo</option>
+            <option>Cotizar un paquete</option>
+            <option>Plan personalizado</option>
+            <option>Estado de una reserva</option>
+            <option>Trabajar con nosotros</option>
+            <option>Otro</option>
+          </select>
+          <span class="error-msg">Selecciona un asunto.</span>
+        </div>
+        <div class="field">
+          <label for="c-mensaje">Mensaje</label>
+          <textarea id="c-mensaje" name="mensaje" rows="5" required minlength="10"></textarea>
+          <span class="error-msg">Cuéntanos un poco más (mínimo 10 caracteres).</span>
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox" id="c-acepto" name="acepto" required>
+          <label for="c-acepto">Acepto que mis datos sean usados para responder esta solicitud.</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+      </form>
+    </div>
+
+    <div class="contact-info-card">
+      <h2>Nuestra ubicación</h2>
+      <ul class="info-list">
+        <li><i class="fa-solid fa-location-dot"></i><div><strong>Dirección</strong><span>Calle 123 #45-67, Bogotá, Colombia</span></div></li>
+        <li><i class="fa-solid fa-phone"></i><div><strong>Teléfono</strong><span>+57 300 111 2233</span></div></li>
+        <li><i class="fa-solid fa-envelope"></i><div><strong>Correo</strong><span>contacto@viajesinolvidables.com</span></div></li>
+        <li><i class="fa-regular fa-clock"></i><div><strong>Horario</strong><span>Lun – Vie: 8:00 a.m. – 6:00 p.m. · Sáb: 9:00 a.m. – 1:00 p.m.</span></div></li>
+      </ul>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2315664721064!2d-75.60675492635218!3d6.233175326471822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442993eeb42edd%3A0x75818b7e73dfbd5e!2sCentro%20Comercial%20Los%20Molinos!5e0!3m2!1ses!2sco!4v1759530923451!5m2!1ses!2sco" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Viajes Inolvidables"></iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>✈ Viajes Inolvidables</h3>
+        <p>Agencia de viajes colombiana. Diseñamos itinerarios reales a los destinos más pedidos del mundo, con acompañamiento antes, durante y después del viaje.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/573127862807" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="paquetes.html">Paquetes</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contactenos.html">Contáctenos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cuenta</h4>
+        <ul>
+          <li><a href="login.html">Ingresar</a></li>
+          <li><a href="register.html">Crear cuenta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Calle 123 #45-67, Bogotá</li>
+          <li><i class="fa-solid fa-phone"></i> +57 300 111 2233</li>
+          <li><i class="fa-solid fa-envelope"></i> contacto@viajesinolvidables.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Viajes Inolvidables. Todos los derechos reservados.</span>
+      <span>RNT Colombia · Agencia registrada</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573127862807?text=Hola,%20quiero%20más%20información%20sobre%20viajes" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+  <span class="tooltip">¡Escríbenos en WhatsApp!</span>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/contacto.js"></script>
+</body>
+</html>

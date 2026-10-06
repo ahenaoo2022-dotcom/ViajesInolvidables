@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paquetes — Viajes Inolvidables</title>
+<meta name="description" content="Explora nuestros paquetes turísticos y filtra por tipo de viajero: solo, en pareja, familia, grupo o tercera edad.">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/paquetes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Viajes Inolvidables">
+      <span>Viajes Inolvidables<span class="brand-mark">AGENCIA DE VIAJES · COL</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Inicio</a>
+      <a href="paquetes.html" aria-current="page">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contactenos.html">Contáctenos</a>
+      <div class="nav-auth" id="navAuth">
+        <a href="login.html" class="btn btn-outline" data-auth="guest">Ingresar</a>
+        <a href="register.html" class="btn btn-primary" data-auth="guest">Crear cuenta</a>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Catálogo completo</p>
+    <h1>Encuentra el paquete a tu ritmo</h1>
+    <p>Filtra por cómo viajas y por tipo de experiencia. Todos los precios incluyen vuelo, hospedaje y traslados.</p>
+  </div>
+</section>
+
+<section class="section filters-section">
+  <div class="container">
+
+    <div class="filter-bar">
+      <div class="filter-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="filtroTexto" placeholder="Buscar destino o país...">
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Viajero:</span>
+      <div class="chip-row" id="chipsPerfil">
+        <button class="chip is-active" data-perfil="todos">Todos</button>
+        <button class="chip" data-perfil="solo">Solo/a</button>
+        <button class="chip" data-perfil="pareja">Pareja</button>
+        <button class="chip" data-perfil="familia">Familia</button>
+        <button class="chip" data-perfil="grupo">Grupo</button>
+        <button class="chip" data-perfil="tercera-edad">Tercera edad</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Categoría:</span>
+      <div class="chip-row" id="chipsCategoria">
+        <button class="chip is-active" data-categoria="todos">Todas</button>
+        <button class="chip" data-categoria="Playa">Playa</button>
+        <button class="chip" data-categoria="Naturaleza">Naturaleza</button>
+        <button class="chip" data-categoria="Aventura">Aventura</button>
+        <button class="chip" data-categoria="Cultural">Cultural</button>
+        <button class="chip" data-categoria="Romántico">Romántico</button>
+      </div>
+    </div>
+
+    <p class="filter-count" id="filterCount"></p>
+
+    <div class="ticket-grid" id="catalogoGrid"><!-- generado por js/paquetes.js --></div>
+    <p class="empty-state" id="emptyState" hidden>No encontramos paquetes con esos filtros. Prueba quitando alguno.</p>
+  </div>
+</section>
+
+<section class="section section--navy custom-cta">
+  <div class="container custom-cta-grid">
+    <div>
+      <p class="eyebrow">¿No encuentras tu destino?</p>
+      <h2>Armamos un plan a tu medida</h2>
+      <p>Cuéntanos fechas, presupuesto y con quién viajas — te devolvemos una propuesta en menos de 24 horas.</p>
+    </div>
+    <a href="contactenos.html" class="btn btn-primary">Solicitar plan personalizado</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>✈ Viajes Inolvidables</h3>
+        <p>Agencia de viajes colombiana. Diseñamos itinerarios reales a los destinos más pedidos del mundo, con acompañamiento antes, durante y después del viaje.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/573127862807" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="paquetes.html">Paquetes</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contactenos.html">Contáctenos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cuenta</h4>
+        <ul>
+          <li><a href="login.html">Ingresar</a></li>
+          <li><a href="register.html">Crear cuenta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Calle 123 #45-67, Bogotá</li>
+          <li><i class="fa-solid fa-phone"></i> +57 300 111 2233</li>
+          <li><i class="fa-solid fa-envelope"></i> contacto@viajesinolvidables.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Viajes Inolvidables. Todos los derechos reservados.</span>
+      <span>RNT Colombia · Agencia registrada</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573127862807?text=Hola,%20quiero%20más%20información%20sobre%20viajes" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+  <span class="tooltip">¡Escríbenos en WhatsApp!</span>
+</a>
+
+<!-- Modal de reserva -->
+<div class="modal-backdrop" id="modalReserva" hidden>
+  <div class="modal-ticket" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
+    <div class="modal-header" id="modalHeader">
+      <!-- generado por js -->
+    </div>
+    <form id="formReserva" action="php/reservar.php" method="POST">
+      <input type="hidden" name="paquete_id" id="rv-paquete-id">
+      <input type="hidden" name="paquete_destino" id="rv-paquete-destino">
+      <input type="hidden" name="paquete_precio" id="rv-paquete-precio">
+
+      <div class="field-row">
+        <div class="field">
+          <label for="rv-nombre">Nombre completo</label>
+          <input type="text" id="rv-nombre" name="nombre" required minlength="3">
+          <span class="error-msg">Escribe tu nombre completo.</span>
+        </div>
+        <div class="field">
+          <label for="rv-email">Correo electrónico</label>
+          <input type="email" id="rv-email" name="email" required>
+          <span class="error-msg">Ingresa un correo válido.</span>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="rv-telefono">Teléfono</label>
+          <input type="tel" id="rv-telefono" name="telefono" required pattern="[0-9+ ]{7,15}">
+          <span class="error-msg">Ingresa un teléfono válido.</span>
+        </div>
+        <div class="field">
+          <label for="rv-viajeros">N.º de viajeros</label>
+          <input type="number" id="rv-viajeros" name="viajeros" min="1" max="20" value="1" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="rv-fecha">Fecha de salida deseada</label>
+        <input type="date" id="rv-fecha" name="fecha" required>
+        <span class="error-msg">Elige una fecha a partir de hoy.</span>
+      </div>
+      <div class="field">
+        <label for="rv-mensaje">¿Algo que debamos saber? (opcional)</label>
+        <textarea id="rv-mensaje" name="mensaje" rows="3" placeholder="Alergias, fechas flexibles, ocasión especial..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Confirmar solicitud de reserva</button>
+      <p class="form-note">No se realiza ningún cobro ahora. Un asesor te contactará para confirmar disponibilidad y forma de pago.</p>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/paquetes.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viajes Inolvidables — Agencia de viajes</title>
+<meta name="description" content="Vuelos, hoteles y paquetes turísticos a los mejores destinos del mundo. Cotiza y reserva tu próximo viaje con Viajes Inolvidables.">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Viajes Inolvidables">
+      <span>Viajes Inolvidables<span class="brand-mark">AGENCIA DE VIAJES · COL</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contactenos.html">Contáctenos</a>
+      <div class="nav-auth" id="navAuth">
+        <a href="login.html" class="btn btn-outline" data-auth="guest">Ingresar</a>
+        <a href="register.html" class="btn btn-primary" data-auth="guest">Crear cuenta</a>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80" alt="Vista aérea de costa tropical al atardecer">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">Vuelos · Hoteles · Paquetes todo incluido</p>
+    <h1>Tu próximo viaje empieza<br>con una buena ruta.</h1>
+    <p class="hero-sub">Diseñamos itinerarios a la medida — desde escapadas de fin de semana hasta lunas de miel al otro lado del mundo. Compara, cotiza y reserva en minutos.</p>
+
+    <form class="search-widget" id="searchWidget">
+      <div class="search-field">
+        <label for="sw-origen">Origen</label>
+        <input type="text" id="sw-origen" placeholder="Bogotá (BOG)" value="Bogotá">
+      </div>
+      <div class="search-field">
+        <label for="sw-destino">Destino</label>
+        <input type="text" id="sw-destino" placeholder="¿A dónde vas?" list="destinos-list" required>
+        <datalist id="destinos-list">
+          <option value="Cartagena">
+          <option value="San Andrés">
+          <option value="Eje Cafetero">
+          <option value="Cancún">
+          <option value="Machu Picchu">
+          <option value="Fiordos de Noruega">
+          <option value="París">
+          <option value="Tokio">
+        </datalist>
+      </div>
+      <div class="search-field">
+        <label for="sw-fecha">Fecha de salida</label>
+        <input type="date" id="sw-fecha">
+      </div>
+      <div class="search-field">
+        <label for="sw-viajeros">Viajeros</label>
+        <select id="sw-viajeros">
+          <option>Solo/a</option>
+          <option>En pareja</option>
+          <option>Familia</option>
+          <option>Grupo de amigos</option>
+          <option>Tercera edad</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary search-submit">
+        <i class="fa-solid fa-magnifying-glass"></i> Buscar
+      </button>
+    </form>
+  </div>
+</section>
+
+<section class="section trust-strip">
+  <div class="container trust-grid">
+    <div class="trust-item"><i class="fa-solid fa-shield-heart"></i><span>Asistencia médica incluida</span></div>
+    <div class="trust-item"><i class="fa-solid fa-credit-card"></i><span>Pagos hasta en 12 cuotas</span></div>
+    <div class="trust-item"><i class="fa-solid fa-headset"></i><span>Soporte 24/7 en español</span></div>
+    <div class="trust-item"><i class="fa-solid fa-plane-circle-check"></i><span>+1.200 viajeros satisfechos</span></div>
+  </div>
+</section>
+
+<section class="section section--sand" id="destinos">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Salidas confirmadas</p>
+      <h2>Destinos que están pidiendo maleta</h2>
+      <p>Una selección curada de nuestros paquetes más reservados este mes, con vuelo, hospedaje y traslados incluidos.</p>
+    </div>
+    <div class="ticket-grid" id="destinosGrid"><!-- generado por js/main.js --></div>
+    <div class="section-cta">
+      <a href="paquetes.html" class="btn btn-outline">Ver todos los paquetes <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="section why-us">
+  <div class="container why-grid">
+    <div class="why-copy">
+      <p class="eyebrow">¿Por qué Viajes Inolvidables?</p>
+      <h2>Viajamos con vos, no solo te vendemos un tiquete.</h2>
+      <p>Somos una agencia colombiana con más de 8 años armando itinerarios reales, no plantillas. Cada paquete pasa por nuestro equipo antes de publicarse.</p>
+    </div>
+    <div class="why-cards">
+      <div class="why-card">
+        <i class="fa-solid fa-route"></i>
+        <h3>Itinerarios a la medida</h3>
+        <p>Ajustamos cada paquete según si viajas solo, en pareja, en familia o en grupo.</p>
+      </div>
+      <div class="why-card">
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+        <h3>Mejor precio garantizado</h3>
+        <p>Si encuentras el mismo plan más barato en otra agencia, igualamos el precio.</p>
+      </div>
+      <div class="why-card">
+        <i class="fa-solid fa-passport"></i>
+        <h3>Acompañamiento total</h3>
+        <p>Visas, seguros y documentación: te guiamos en cada paso antes de viajar.</p>
+      </div>
+      <div class="why-card">
+        <i class="fa-solid fa-star"></i>
+        <h3>Hoteles verificados</h3>
+        <p>Visitamos y calificamos personalmente los hoteles de nuestro catálogo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Lo que dicen nuestros viajeros</p>
+      <h2>Historias, no solo calificaciones</h2>
+    </div>
+    <div class="testimonial-grid">
+      <blockquote class="testimonial">
+        <p>"Organizaron nuestra luna de miel en Cancún sin un solo detalle fuera de lugar. El hotel superó las fotos."</p>
+        <footer><strong>Laura M.</strong> — Cancún, México</footer>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"Viajé sola a Machu Picchu y me sentí acompañada todo el trayecto. Volvería a reservar sin pensarlo."</p>
+        <footer><strong>Daniela R.</strong> — Perú</footer>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"Llevamos a mis papás a los fiordos noruegos y el ritmo del viaje fue perfecto para ellos. Gracias, equipo."</p>
+        <footer><strong>Carlos A.</strong> — Noruega</footer>
+      </blockquote>
+    </div>
+    <div class="stats-strip">
+      <div><div class="stat-num">8</div><div class="stat-label">Años operando</div></div>
+      <div><div class="stat-num">32</div><div class="stat-label">Destinos activos</div></div>
+      <div><div class="stat-num">1.200+</div><div class="stat-label">Viajeros al año</div></div>
+      <div><div class="stat-num">4.8/5</div><div class="stat-label">Calificación promedio</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section newsletter">
+  <div class="container newsletter-box">
+    <div>
+      <p class="eyebrow">Ofertas antes que nadie</p>
+      <h2>Recibe rutas y precios cada semana</h2>
+      <p>Sin spam: solo salidas reales, con cupos limitados, directo a tu correo.</p>
+    </div>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="tu@correo.com" required aria-label="Correo electrónico">
+      <button type="submit" class="btn btn-primary">Suscribirme</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>✈ Viajes Inolvidables</h3>
+        <p>Agencia de viajes colombiana. Diseñamos itinerarios reales a los destinos más pedidos del mundo, con acompañamiento antes, durante y después del viaje.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/573127862807" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="paquetes.html">Paquetes</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contactenos.html">Contáctenos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cuenta</h4>
+        <ul>
+          <li><a href="login.html">Ingresar</a></li>
+          <li><a href="register.html">Crear cuenta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Calle 123 #45-67, Bogotá</li>
+          <li><i class="fa-solid fa-phone"></i> +57 300 111 2233</li>
+          <li><i class="fa-solid fa-envelope"></i> contacto@viajesinolvidables.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Viajes Inolvidables. Todos los derechos reservados.</span>
+      <span>RNT Colombia · Agencia registrada</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573127862807?text=Hola,%20quiero%20más%20información%20sobre%20viajes" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+  <span class="tooltip">¡Escríbenos en WhatsApp!</span>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

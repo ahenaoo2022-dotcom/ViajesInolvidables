@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingresar — Viajes Inolvidables</title>
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" alt="Viajes Inolvidables">
+      <span>Viajes Inolvidables<span class="brand-mark">AGENCIA DE VIAJES · COL</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Inicio</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contactenos.html">Contáctenos</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="auth-section">
+  <div class="container auth-grid">
+
+    <div class="auth-side">
+      <p class="eyebrow">Pase de abordar</p>
+      <h1>Bienvenido de vuelta</h1>
+      <p>Ingresa para ver tus reservas, guardar destinos favoritos y agilizar tu próxima cotización.</p>
+      <div class="ticket auth-mini-ticket">
+        <div class="ticket-main">
+          <div class="ticket-route">
+            <span class="code">BOG</span><span class="dash"></span>
+            <i class="fa-solid fa-plane"></i>
+            <span class="dash"></span><span class="code">???</span>
+          </div>
+          <h3 class="ticket-title">Tu próximo destino</h3>
+          <p style="font-size:0.88rem;">Inicia sesión para continuar tu reserva o cotización guardada.</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="price-label">Estado</span>
+          <div class="price" style="font-size:1rem;">Pendiente</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-card">
+      <h2>Ingresar</h2>
+      <p class="form-note" id="loginNotice" style="margin-bottom:18px;"></p>
+
+      <form id="formLogin" action="php/login.php" method="POST" novalidate>
+        <div class="field">
+          <label for="li-email">Correo electrónico</label>
+          <input type="email" id="li-email" name="email" required autocomplete="email">
+          <span class="error-msg">Ingresa un correo válido.</span>
+        </div>
+        <div class="field">
+          <label for="li-password">Contraseña</label>
+          <div class="password-wrap">
+            <input type="password" id="li-password" name="password" required minlength="6" autocomplete="current-password">
+            <button type="button" class="pw-toggle" data-target="li-password" aria-label="Mostrar contraseña"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <span class="error-msg">La contraseña debe tener al menos 6 caracteres.</span>
+        </div>
+        <div class="auth-row">
+          <label class="checkbox-inline"><input type="checkbox" name="recordar"> Recordarme</label>
+          <a href="#" class="link-muted">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+        <p class="form-note" style="text-align:center;margin-top:16px;">¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.12); padding-top:22px;">
+      <span>© <span id="year"></span> Viajes Inolvidables. Todos los derechos reservados.</span>
+      <span>RNT Colombia · Agencia registrada</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

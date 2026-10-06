@@ -1,0 +1,30 @@
+.contact-section { padding-top: 56px; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 40px;
+  align-items: start;
+}
+.contact-form-card, .contact-info-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+.contact-info-card { background: var(--sand); border: none; }
+
+.checkbox-field { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
+.checkbox-field input { margin-top: 3px; }
+.checkbox-field label { font-size: 0.86rem; color: var(--ink-soft); }
+
+.info-list { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 18px; }
+.info-list li { display: flex; align-items: flex-start; gap: 14px; }
+.info-list i { color: var(--gold); font-size: 1.1rem; margin-top: 3px; width: 20px; }
+.info-list strong { display: block; font-size: 0.88rem; color: var(--navy-dark); }
+.info-list span { font-size: 0.88rem; color: var(--ink-soft); }
+
+.map-container { border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
