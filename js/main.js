@@ -74,22 +74,26 @@ document.addEventListener("error", (e) => {
 document.querySelectorAll("#year").forEach(el => el.textContent = new Date().getFullYear());
 
 /* ---------- Reveal on scroll ---------- */
-(function initReveal() {
-  const targets = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window) || targets.length === 0) {
-    targets.forEach(t => t.classList.add("is-visible"));
-    return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  targets.forEach(t => io.observe(t));
-})();
+/* Corrección: el observador se expone como función para poder aplicarlo también
+   a las tarjetas que se dibujan después de cargar la página (destacados y catálogo).
+   Antes solo se aplicaba a los elementos existentes al cargar y las tarjetas quedaban invisibles. */
+const revealObserver = ("IntersectionObserver" in window)
+  ? new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 })
+  : null;
+
+function observarReveal(root = document) {
+  root.querySelectorAll(".reveal:not(.is-visible)").forEach(t => {
+    if (revealObserver) revealObserver.observe(t);
+    else t.classList.add("is-visible");
+  });
+}
 
 /* ---------- Render de tickets (destinos destacados / catálogo) ---------- */
 function ticketHTML(p) {
@@ -137,6 +141,9 @@ function ticketHTML(p) {
   const destacados = PAQUETES.filter(p => p.destacado).slice(0, 6);
   grid.innerHTML = destacados.map(ticketHTML).join("");
 })();
+
+/* Activar la animación en todos los elementos .reveal (incluidos los destacados recién dibujados) */
+observarReveal();
 
 /* ---------- Home: buscador (redirige a paquetes.html con filtros) ---------- */
 (function initSearchWidget() {

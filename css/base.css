@@ -126,7 +126,7 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   z-index: 200;
   background: rgba(251, 247, 239, 0.92);
-  backdrop-filter: blur(8px);
+  /* Se retira backdrop-filter: convertía el encabezado en el contenedor del menú móvil (position: fixed) y lo dejaba de 60 px de alto */
   border-bottom: 1px solid var(--line);
 }
 .site-header .container {

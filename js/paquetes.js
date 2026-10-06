@@ -23,6 +23,8 @@ function renderCatalogo() {
 
   const resultado = PAQUETES.filter(paqueteCoincide);
   grid.innerHTML = resultado.map(ticketHTML).join("");
+  /* Corrección: aplicar la animación de aparición a las tarjetas recién dibujadas */
+  if (typeof observarReveal === "function") observarReveal(grid);
   empty.hidden = resultado.length > 0;
   count.textContent = resultado.length === 1
     ? "1 paquete encontrado"
